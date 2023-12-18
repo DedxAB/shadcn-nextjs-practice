@@ -22,7 +22,7 @@ export default function RootLayout({ children }) {
           <MyContext>
             <Header />
             {children}
-            <Footer />
+            {/* <Footer /> */}
           </MyContext>
         </ThemeProvider>
       </body>

@@ -5,7 +5,7 @@ const Header = () => {
   return (
     <header className="container flex justify-between mx-auto items-center py-5">
       <Link href="/">
-        <span className="text-lg font-bold">DEDSEC</span>
+        <span className="text-2xl font-bold">DEDSEC</span>
       </Link>
       <div className="justify-center items-center">
         <ModeToggle />
