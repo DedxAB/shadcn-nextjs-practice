@@ -86,3 +86,6 @@
 body {
   font-family: 'Gilroy', sans-serif;
 }
+::-webkit-scrollbar{
+  width: 0;
+}
