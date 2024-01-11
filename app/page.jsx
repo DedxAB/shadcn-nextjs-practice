@@ -4,19 +4,21 @@ import Image from "next/image";
 const Home = () => {
   return (
     <main className="h-screen font-bold relative">
-      <div className="absolute inset-0 z-[-1]">
+      <div>
         <Image
           src="https://wallpaperaccess.com/full/1247841.png"
           alt="just a photo"
-          objectFit="cover"
-          layout="fill"
+          priority
+          className="brightness-50 w-auto h-auto"
+          fill
         />
       </div>
-      <div className="container text-white">
+      <div className="container text-white absolute inset-0">
         <h1 className="text-9xl">Home Page</h1>
         <div className="gap-4 flex italic">
           <Link href="/about">About Page</Link>
           <Link href="/contact">Contact Page</Link>
+          <Link href="/blogs">Blogs Page</Link>
         </div>
       </div>
     </main>

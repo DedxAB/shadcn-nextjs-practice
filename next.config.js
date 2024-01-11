@@ -2,7 +2,14 @@
 // next.config.js
 module.exports = {
     images: {
-      domains: ['wallpaperaccess.com'],
+      remotePatterns: [
+        {
+          protocol: 'https',
+          hostname: 'wallpaperaccess.com',
+          
+        },
+      ],
     },
   };
+  
   
