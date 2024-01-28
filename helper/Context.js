@@ -5,7 +5,7 @@ export const MyContext = createContext();
 
 const Context = ({ children }) => {
   const user = "Arnab Bhoumik";
-  console.log(user)
+  // console.log(user)
   return <MyContext.Provider value={user}>{children}</MyContext.Provider>; 
 };
 
