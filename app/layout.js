@@ -1,8 +1,7 @@
 import "./globals.css";
 import Header from "@/components/header/Header";
-// import Footer from "@/components/footer/Footer";
 import { ThemeProvider } from "@/components/theme-provider";
-import MyContext  from "@/helper/Context";
+import MyContext from "@/helper/Context";
 
 export const metadata = {
   title: "Shadcn UI",
@@ -22,7 +21,6 @@ export default function RootLayout({ children }) {
           <MyContext>
             <Header />
             {children}
-            {/* <Footer /> */}
           </MyContext>
         </ThemeProvider>
       </body>
