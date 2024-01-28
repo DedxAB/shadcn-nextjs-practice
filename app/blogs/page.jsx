@@ -1,5 +1,4 @@
-import React from "react";
-
+// Desc: Blogs page
 const Blogs = () => {
   return (
     <main className="container">
