@@ -20,7 +20,7 @@ export default function RootLayout({ children }) {
         >
           <MyContext>
             <Header />
-            {children}
+            <div className="flex flex-col items-center m-auto">{children}</div>
           </MyContext>
         </ThemeProvider>
       </body>

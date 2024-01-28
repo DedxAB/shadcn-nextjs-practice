@@ -1,3 +1,6 @@
+export const metadata = {
+    title: "Register Your Account",
+};
 const Register = () => {
   return (
     <div>
