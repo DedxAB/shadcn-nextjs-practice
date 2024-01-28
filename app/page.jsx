@@ -11,6 +11,17 @@ const Home = () => {
     { name: "Contact", href: "/contact" },
     { name: "Blogs", href: "/blogs" },
   ];
+
+  const generateRandomNumber = (count) => {
+    return Math.floor(Math.random() * count);
+  };
+  const randomNumber = generateRandomNumber(4);
+
+  console.log(randomNumber);
+  if (randomNumber === 3) {
+    throw new Error("Something went wrong");
+  }
+
   return (
     <>
       <h1 className="text-9xl">Home Page</h1>
