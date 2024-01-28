@@ -6,7 +6,7 @@ const Order = () => {
   const router = useRouter();
   const handelButton = () => {
     console.log("Button Clicked");
-    router.push("/login");
+    router.push("/");
     // router.back();
   };
 

@@ -1,27 +1,29 @@
 import Link from "next/link";
-import Image from "next/image";
 
 const Home = () => {
+  const navLinks = [
+    { name: "Login", href: "/login" },
+    { name: "Register", href: "/register" },
+    { name: "Forgot Password", href: "/forgot-password" },
+    { name: "Order Details", href: "/order-details" },
+    { name: "Home", href: "/" },
+    { name: "About", href: "/about" },
+    { name: "Contact", href: "/contact" },
+    { name: "Blogs", href: "/blogs" },
+  ];
   return (
-    <main className="h-screen font-bold relative">
-      <div>
-        <Image
-          src="https://wallpaperaccess.com/full/1247841.png"
-          alt="just a photo"
-          priority
-          className="brightness-50 w-auto h-auto"
-          fill
-        />
+    <>
+      <h1 className="text-9xl">Home Page</h1>
+      <div className="gap-4 flex italic my-3">
+        {navLinks.map((link) => {
+          return (
+            <Link href={link.href} key={link.name}>
+              {link.name}
+            </Link>
+          );
+        })}
       </div>
-      <div className="container text-white absolute inset-0">
-        <h1 className="text-9xl">Home Page</h1>
-        <div className="gap-4 flex italic">
-          <Link href="/about">About Page</Link>
-          <Link href="/contact">Contact Page</Link>
-          <Link href="/blogs">Blogs Page</Link>
-        </div>
-      </div>
-    </main>
+    </>
   );
 };
 
