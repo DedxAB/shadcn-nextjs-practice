@@ -65,20 +65,20 @@
 
 @font-face {
   font-family: 'Gilroy';
-  src: url('../public/fonts/Gilroy-Regular.ttf') format('truetype');
+  src: url('../../public/fonts/Gilroy-Regular.ttf') format('truetype');
   font-weight: normal;
   font-style: normal;
 }
 
 @font-face {
   font-family: 'Gilroy';
-  src: url('../public/fonts/Gilroy-Bold.ttf') format('truetype');
+  src: url('../../public/fonts/Gilroy-Bold.ttf') format('truetype');
   font-weight: bold;
   font-style: normal;
 }
 @font-face {
   font-family: 'Gilroy';
-  src: url('../public/fonts/Gilroy-BoldItalic.ttf') format('truetype');
+  src: url('../../public/fonts/Gilroy-BoldItalic.ttf') format('truetype');
   font-weight: bold;
   font-style: italic;
 }
