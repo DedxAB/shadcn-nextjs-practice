@@ -13,6 +13,12 @@ const F1 = () => {
       <Link href={`/f1/f2`}>
         <Button variant={`outline`}>F2</Button>
       </Link>
+      <Link href={`/f1/f3`}>
+        <Button variant={`outline`}>F3</Button>
+      </Link>
+      <Link href={`/login`}>
+        <Button variant={`outline`}>Login</Button>
+      </Link>
     </>
   );
 };
