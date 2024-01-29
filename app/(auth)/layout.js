@@ -11,7 +11,7 @@ export default function AuthLayout({ children }) {
 
   const pathName = usePathname();
   return (
-    <div>
+    <div className="text-lg">
       <h1>Auth Layout</h1>
       {navLinks.map((link) => {
         const activePath = pathName.startsWith(link.href);
@@ -20,12 +20,13 @@ export default function AuthLayout({ children }) {
           <Link
             href={link.href}
             key={link.name}
-            className={`mx-3 border-white border-2 px-3 ${activeStyle}`}
+            className={`pr-3 mr-3 border-white border-2 px-3 ${activeStyle}`}
           >
             {link.name}
           </Link>
         );
       })}
+      <h1>Auth layout end</h1>
       <div>{children}</div>
     </div>
   );

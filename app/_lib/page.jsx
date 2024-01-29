@@ -3,7 +3,7 @@ const page = () => {
     <div>
       {" "}
       _lib page
-      <h1>This is the private folder</h1>
+      <h1>This is the private route</h1>
     </div>
   );
 };
