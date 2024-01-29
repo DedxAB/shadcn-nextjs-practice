@@ -1,5 +1,7 @@
+"use client";
 import { Button } from "@/components/ui/button";
 import Link from "next/link";
+import { useState } from "react";
 
 const Home = () => {
   const navLinks = [
@@ -17,13 +19,19 @@ const Home = () => {
   const generateRandomNumber = (count) => {
     return Math.floor(Math.random() * count);
   };
-  const randomNumber = generateRandomNumber(4);
+  // const randomNumber = generateRandomNumber(4);
 
-  console.log(randomNumber);
-  if (randomNumber === 3) {
-    throw new Error("Something went wrong");
-  }
-  const isLoggedin = false;
+  // console.log(randomNumber);
+  // if (randomNumber === 3) {
+  //   throw new Error("Something went wrong");
+  // }
+
+  const [isLoggedin, setIsLoggedin] = useState(false);
+  const handelLogin = () => {
+    setIsLoggedin(true);
+  };
+  // const isLoggedin = false;
+
   return isLoggedin ? (
     <>
       <h1 className="text-9xl">Home Page</h1>
@@ -40,9 +48,9 @@ const Home = () => {
   ) : (
     <>
       <h1 className="text-9xl">Login Page</h1>
-      <Link href={`/login`}>
-        <Button variant={`outline`}>Log in</Button>
-      </Link>
+      <Button variant={`outline`} asChild onClick={handelLogin}>
+        <Link href={`/login`}>Log in</Link>
+      </Button>
     </>
   );
 };

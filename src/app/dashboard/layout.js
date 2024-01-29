@@ -3,8 +3,10 @@ export default function DashboardLayout({
   notification,
   settings,
   user,
+  login,
 }) {
-  return (
+  const isLoggedin = false;
+  return isLoggedin ? (
     <div className="text-xl text-center">
       {children}
       <br />
@@ -12,5 +14,7 @@ export default function DashboardLayout({
       <div>{settings}</div>
       <div>{user}</div>
     </div>
+  ) : (
+    <>{login}</>
   );
 }
