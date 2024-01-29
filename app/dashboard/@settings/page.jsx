@@ -1,5 +1,5 @@
 import Card from "@/components/card/Card";
 
 export default function Settings() {
-  return <Card>Settings</Card>;
+  return <Card>Settings - different parallel route</Card>;
 }
