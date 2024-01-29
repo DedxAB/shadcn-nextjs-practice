@@ -1,3 +1,4 @@
+import { Button } from "@/components/ui/button";
 import Link from "next/link";
 
 const Home = () => {
@@ -22,8 +23,8 @@ const Home = () => {
   if (randomNumber === 3) {
     throw new Error("Something went wrong");
   }
-
-  return (
+  const isLoggedin = false;
+  return isLoggedin ? (
     <>
       <h1 className="text-9xl">Home Page</h1>
       <div className="gap-4 flex italic my-3">
@@ -35,6 +36,13 @@ const Home = () => {
           );
         })}
       </div>
+    </>
+  ) : (
+    <>
+      <h1 className="text-9xl">Login Page</h1>
+      <Link href={`/login`}>
+        <Button variant={`outline`}>Log in</Button>
+      </Link>
     </>
   );
 };
