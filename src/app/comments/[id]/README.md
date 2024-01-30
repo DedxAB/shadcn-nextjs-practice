@@ -17,7 +17,8 @@ export async function GET(_req, { params }) {
   const { id } = params;
   const comment = comments.find((comment) => comment.id === Number(id));
   return Response.json(comment);
-}
+} 
+```
 
 ## Removing the Request Object Parameter
 
