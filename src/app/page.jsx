@@ -14,6 +14,8 @@ const Home = () => {
     { name: "Contact", href: "/contact" },
     { name: "Blogs", href: "/blogs" },
     { name: "Dashboard", href: "/dashboard" },
+    { name: "Comments", href: "/comments" },
+    { name: "User", href: "/user" },
   ];
 
   // const generateRandomNumber = (count) => {
