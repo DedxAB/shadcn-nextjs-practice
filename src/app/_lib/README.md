@@ -1,4 +1,4 @@
-# Private Route
+# Private Route/Folder
 
 ## In our application, we have a concept of "Private Route". This is used to restrict access to certain parts of our application.
 
