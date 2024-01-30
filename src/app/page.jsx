@@ -16,9 +16,9 @@ const Home = () => {
     { name: "Dashboard", href: "/dashboard" },
   ];
 
-  const generateRandomNumber = (count) => {
-    return Math.floor(Math.random() * count);
-  };
+  // const generateRandomNumber = (count) => {
+  //   return Math.floor(Math.random() * count);
+  // };
   // const randomNumber = generateRandomNumber(4);
 
   // console.log(randomNumber);
@@ -48,9 +48,11 @@ const Home = () => {
   ) : (
     <>
       <h1 className="text-9xl">Login Page</h1>
-      <Button variant={`outline`} asChild onClick={handelLogin}>
-        <Link href={`/login`}>Log in</Link>
-      </Button>
+      <Link href={`/login`}>
+        <Button variant={`outline`} onClick={handelLogin}>
+          Log in
+        </Button>
+      </Link>
     </>
   );
 };
