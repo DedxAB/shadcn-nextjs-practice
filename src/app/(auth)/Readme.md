@@ -1,4 +1,9 @@
-Group Routing-->
-()--> inside the open and closed paranthesis we declared the group route.
-Like this-->
-(auth)--> this auth is not the route, inside the (auth) folder all folders are the route
+# Group Routing
+
+## Understanding Group Routes
+
+- Group routes are declared within open and closed parentheses: `()`.
+- The text within the parentheses represents the group name, but it is not itself a route.
+- The actual routes are defined within folders named after the group, creating a hierarchical structure.
+
+
