@@ -16,6 +16,7 @@ const Home = () => {
     { name: "Dashboard", href: "/dashboard" },
     { name: "Comments", href: "/comments" },
     { name: "User", href: "/user" },
+    { name: "F1", href: "/f1" },
   ];
 
   // const generateRandomNumber = (count) => {
@@ -28,7 +29,7 @@ const Home = () => {
   //   throw new Error("Something went wrong");
   // }
 
-  const [isLoggedin, setIsLoggedin] = useState(false);
+  const [isLoggedin, setIsLoggedin] = useState(true);
   const handelLogin = () => {
     setIsLoggedin(true);
   };
