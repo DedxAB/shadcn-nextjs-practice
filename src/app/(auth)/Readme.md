@@ -1,11 +1,10 @@
-# Group Routing
+# Group Routing in Our Application
 
-## Understanding Group Routes
+## In our application, we use a concept called "Group Routing". This is a method of organizing our routes into logical and manageable groups.
 
-**Key Concepts:**
+### Here's how it works:
 
-- **Declaration:** Group routes are declared within parentheses: `()`.
-- **Group Name vs. Route:** The text within the parentheses is the group name, **not** a route itself.
-- **Route Definition:** The actual routes are defined within folders named after the group.
+We declare a group route inside parentheses `()`. For instance, `(auth)`. It's important to note that `auth` is not a route itself. Rather, it's a directory. All the folders inside the `auth` directory are the actual routes.
 
+This way, we can keep our routing clean and organized, making it easier for developers to navigate through the codebase.
 
