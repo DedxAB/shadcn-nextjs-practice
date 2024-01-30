@@ -1,6 +1,6 @@
 import { comments } from "./data";
 
-export async function GET() {
+export async function GET(_req) {
   return Response.json(comments);
 }
 
@@ -18,8 +18,8 @@ export async function GET() {
 //   return res.status(200).json(comments);
 // }
 
-export async function POST(request) {
-  const { text } = await request.json();
+export async function POST(req) {
+  const { text } = await req.json();
   const newComment = {
     id: comments.length + 1,
     text,
