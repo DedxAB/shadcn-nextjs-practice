@@ -6,6 +6,7 @@ export async function GET(_req, { params }) {
   return Response.json(comment);
 }
 
+// Update
 export async function PATCH(req, { params }) {
   // This is one way using find
   /*
@@ -22,4 +23,19 @@ export async function PATCH(req, { params }) {
   );
   comments[index].text = text;
   return Response.json(comments[index]);
+}
+
+// Delete
+export async function DELETE(_req, { params }) {
+  const { id } = params;
+  const index = comments.findIndex((comment) => comment.id === parseInt(id));
+  const deletedComment = comments.splice(index, 1);
+  // return Response.json(deletedComment);
+  // return Response.json({ message: "Comment deleted successfully" });
+  return new Response(JSON.stringify(deletedComment), {
+    headers: {
+      "content-type": "application/json",
+    },
+    status: 200,
+  });
 }
