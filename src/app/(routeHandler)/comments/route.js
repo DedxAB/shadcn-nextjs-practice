@@ -1,7 +1,13 @@
 import { comments } from "./data";
 
-export async function GET(_req) {
-  return Response.json(comments);
+// # Handling with searchParams in Next JS
+export async function GET(request) {
+  const searchParams = request.nextUrl.searchParams;
+  const query = searchParams.get("q");
+  const filteredComments = query
+    ? comments.filter((comment) => comment.text.includes(query))
+    : comments;
+  return Response.json(filteredComments);
 }
 
 // ## we cannot do this in Next JS
