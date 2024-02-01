@@ -1,7 +1,12 @@
+import { redirect } from "next/navigation";
 import { comments } from "../data";
 
 export async function GET(_req, { params }) {
   const { id } = params;
+  if (parseInt(id) > comments.length) {
+    // return Response.json({ message: "Comment not found" }, { status: 404 });
+    redirect("/comments");
+  }
   const comment = comments.find((comment) => comment.id === parseInt(id));
   return Response.json(comment);
 }
@@ -22,7 +27,7 @@ export async function PATCH(req, { params }) {
     (comment) => comment.id === parseInt(params.id)
   );
   comments[index].text = text;
-  return Response.json(comments[index]);
+  return Response.json(comments[index], { status: 201 });
 }
 
 // Delete
